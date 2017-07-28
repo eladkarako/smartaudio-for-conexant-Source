@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>86a2d589-47d9-4b9b-8213-b5ad9b3b7c23</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>SmartAudio</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Interop.CxHDAudioAPILib" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="SmartAudio\IHDAudioPreview.cs" />
+    <Compile Include="SmartAudio\PreviewTwoDotOne.cs" />
+    <Compile Include="SmartAudio\PreviewFiveDotOne.cs" />
+    <Compile Include="SmartAudio\ISmartAudioPage.cs" />
+    <Compile Include="SmartAudio\JackprofileConfigControl.cs" />
+    <Compile Include="SmartAudio\HDMISettingsPage.cs" />
+    <Compile Include="SmartAudio\SmartAudioAboutWindow.cs" />
+    <Compile Include="SmartAudio\NativeHelpers.cs" />
+    <Compile Include="SmartAudio\LEDUserControl.cs" />
+    <Compile Include="SmartAudio\Core\SkinDescriptor.cs" />
+    <Compile Include="SmartAudio\BluetoothSettingsPage.cs" />
+    <Compile Include="SmartAudio\GraphicEqualizersPage.cs" />
+    <Compile Include="SmartAudio\PreviewBTHeadphone.cs" />
+    <Compile Include="SmartAudio\PreviewPhantomBass.cs" />
+    <Compile Include="SmartAudio\MonitorReg.cs" />
+    <Compile Include="SmartAudio\AnimationToolbar.cs" />
+    <Compile Include="SmartAudio\Workaround110052078705416.cs" />
+    <Compile Include="SmartAudio\Core\SkinPriority.cs" />
+    <Compile Include="SmartAudio\Core\RegisterSkinAssembly.cs" />
+    <Compile Include="SmartAudio\SmartAudioTrayWindow.cs" />
+    <Compile Include="SmartAudio\WAVSounds.cs" />
+    <Compile Include="SmartAudio\EnergyBarsUserControl.cs" />
+    <Compile Include="SmartAudio\SmartAudioStorage.cs" />
+    <Compile Include="SmartAudio\Properties\Resources.cs" />
+    <Compile Include="SmartAudio\PreviewTwoChannel.cs" />
+    <Compile Include="SmartAudio\ImageListItem.cs" />
+    <Compile Include="SmartAudio\SmartAudioSettings.cs" />
+    <Compile Include="SmartAudio\PreviewMixer.cs" />
+    <Compile Include="SmartAudio\PreviewExternalMicrophone.cs" />
+    <Compile Include="SmartAudio\BoostToolTipConvertor.cs" />
+    <Compile Include="SmartAudio\ShutdownApplication.cs" />
+    <Compile Include="SmartAudio\OnJackAssignmentChanged.cs" />
+    <Compile Include="SmartAudio\OnNewSkinApplied.cs" />
+    <Compile Include="SmartAudio\OnSessionSwitch.cs" />
+    <Compile Include="SmartAudio\OnTaskbarCreated.cs" />
+    <Compile Include="SmartAudio\OnRenumerated.cs" />
+    <Compile Include="SmartAudio\App.cs" />
+    <Compile Include="SmartAudio\OnShowAdvancedSettings.cs" />
+    <Compile Include="SmartAudio\OnMasterVolumeChanging.cs" />
+    <Compile Include="SmartAudio\OnMasterVolumeChanged.cs" />
+    <Compile Include="SmartAudio\OnDefaultEndPointChanged.cs" />
+    <Compile Include="SmartAudio\OnChangeVolume.cs" />
+    <Compile Include="SmartAudio\OnChangeMuteState.cs" />
+    <Compile Include="SmartAudio\MuteChangedHandler.cs" />
+    <Compile Include="SmartAudio\SelectionChangedHandler.cs" />
+    <Compile Include="SmartAudio\EndPointVolumeBar.cs" />
+    <Compile Include="SmartAudio\EndPointToolTipConvertor.cs" />
+    <Compile Include="SmartAudio\PreviewEmpty.cs" />
+    <Compile Include="SmartAudio\HeadphoneLimiterPopup.cs" />
+    <Compile Include="SmartAudio\JacType.cs" />
+    <Compile Include="SmartAudio\JackChangedHandler.cs" />
+    <Compile Include="SmartAudio\JackSelectionChangedHandler.cs" />
+    <Compile Include="SmartAudio\JackConfigControl.cs" />
+    <Compile Include="SmartAudio\SpeakerBalance.cs" />
+    <Compile Include="SmartAudio\PreviewMultiChannelSpeakerSetup.cs" />
+    <Compile Include="SmartAudio\SingleInstanceManager.cs" />
+    <Compile Include="SmartAudio\EntryPoint.cs" />
+    <Compile Include="SmartAudio\NativeMethods.cs" />
+    <Compile Include="SmartAudio\LocaleInfo.cs" />
+    <Compile Include="SmartAudio\SALocalization.cs" />
+    <Compile Include="SmartAudio\OnStreamStopped.cs" />
+    <Compile Include="SmartAudio\AudioDirectorPreview.cs" />
+    <Compile Include="SmartAudio\ChangeAudioDirectorMode.cs" />
+    <Compile Include="SmartAudio\AudioDirectorPage.cs" />
+    <Compile Include="SmartAudio\SplitButtonResources.cs" />
+    <Compile Include="SmartAudio\Properties\Settings.cs" />
+    <Compile Include="SmartAudio\PreviewVolumeBar.cs" />
+    <Compile Include="SmartAudio\JackPortUpdateCompletedHandler.cs" />
+    <Compile Include="SmartAudio\JackPortChangedHandler.cs" />
+    <Compile Include="SmartAudio\JackPortSelectionChangedHandler.cs" />
+    <Compile Include="SmartAudio\IORetaskingUserControl.cs" />
+    <Compile Include="SmartAudio\ItemStateChanged.cs" />
+    <Compile Include="SmartAudio\ItemStateChanging.cs" />
+    <Compile Include="SmartAudio\ImageCheckBox.cs" />
+    <Compile Include="SmartAudio\OnEQBandChanged.cs" />
+    <Compile Include="SmartAudio\EqualizerBar.cs" />
+    <Compile Include="SmartAudio\SystemTray.cs" />
+    <Compile Include="SmartAudio\ThirdPartyWindow.cs" />
+    <Compile Include="SmartAudio\SmartAudioINISettings.cs" />
+    <Compile Include="SmartAudio\OnJackPopup.cs" />
+    <Compile Include="SmartAudio\OnJackUnplugged.cs" />
+    <Compile Include="SmartAudio\JackRetaskingPopup.cs" />
+    <Compile Include="SmartAudio\PreviewLineIn.cs" />
+    <Compile Include="SmartAudio\Preview3DSpeaker.cs" />
+    <Compile Include="SmartAudio\PeakMeterBAR.cs" />
+    <Compile Include="SmartAudio\JackConfiguration.cs" />
+    <Compile Include="SmartAudio\FormattedSlider.cs" />
+    <Compile Include="SmartAudio\SplitButton.cs" />
+    <Compile Include="SmartAudio\Preview3DSound.cs" />
+    <Compile Include="SmartAudio\SpeakerSetupPage.cs" />
+    <Compile Include="SmartAudio\ChannelType.cs" />
+    <Compile Include="SmartAudio\ChannelInfo.cs" />
+    <Compile Include="SmartAudio\IChannelBalance.cs" />
+    <Compile Include="SmartAudio\ChannelBalance.cs" />
+    <Compile Include="SmartAudio\MainWindow.cs" />
+    <Compile Include="SmartAudio\SpkrNRMargins.cs" />
+    <Compile Include="SmartAudio\SpkrNRLEDTextMargins.cs" />
+    <Compile Include="SmartAudio\VoiceEffectsPage.cs" />
+    <Compile Include="SmartAudio\PreviewHeadphone.cs" />
+    <Compile Include="SmartAudio\BamlHelper.cs" />
+    <Compile Include="SmartAudio\RefreshVolumeLevelMeter.cs" />
+    <Compile Include="SmartAudio\ValueSliderMapper.cs" />
+    <Compile Include="SmartAudio\AsyncPeakMeterHandler.cs" />
+    <Compile Include="SmartAudio\UpdateSpectrumBars.cs" />
+    <Compile Include="SmartAudio\UpdateUIHandler.cs" />
+    <Compile Include="SmartAudio\VolumeLevelMeter.cs" />
+    <Compile Include="SmartAudio\OnRefreshBalance.cs" />
+    <Compile Include="SmartAudio\PreviewInternalSpeakers.cs" />
+    <Compile Include="SmartAudio\OnVolumeChanged.cs" />
+    <Compile Include="SmartAudio\OnMuteChanged.cs" />
+    <Compile Include="SmartAudio\ReEnumerate.cs" />
+    <Compile Include="SmartAudio\DefaultEndPointChangedHandler.cs" />
+    <Compile Include="SmartAudio\SetHeadphoneEQAccess.cs" />
+    <Compile Include="SmartAudio\OnDeviceCommand.cs" />
+    <Compile Include="SmartAudio\MainAudioControlPage.cs" />
+    <Compile Include="SmartAudio\SmartAudioINFSettings.cs" />
+    <Compile Include="SmartAudio\MultiChannelBalance.cs" />
+    <Compile Include="SmartAudio\AdvancedSettingsTwoChannel.cs" />
+    <Compile Include="SmartAudio\OnTimer.cs" />
+    <Compile Include="SmartAudio\StatusWindow.cs" />
+    <Compile Include="SmartAudio\PreviewHDMI.cs" />
+    <Compile Include="SmartAudio\RearJacksPanel.cs" />
+    <Compile Include="SmartAudio\AutoAdjust.cs" />
+    <Compile Include="SmartAudio\Dot.cs" />
+    <Compile Include="SmartAudio\PlayerStopped.cs" />
+    <Compile Include="SmartAudio\AudioPlayer.cs" />
+    <Compile Include="SmartAudio\SplitButtonMode.cs" />
+    <Compile Include="SmartAudio\GlassBackPlate.cs" />
+    <Compile Include="SmartAudio\VoiceEffectsPageNoBeamForming.cs" />
+    <Compile Include="SmartAudio\Severity.cs" />
+    <Compile Include="SmartAudio\SmartAudioLog.cs" />
+    <Compile Include="XamlGeneratedNamespace\GeneratedInternalTypeHelper.cs" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.zh_Hans.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.ko_KR.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.el_GR.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.da_DK.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.zh_TW.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.ro_RO.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.ja_JP.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.it_IT.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.es_ES.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.tr_TR.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.ru_RU.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.pt_BR.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.fi_FI.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.th_TH.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.sv_SE.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.sk_SK.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.cs_CZ.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.en_US.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.de_DE.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.pt_PT.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.he_IL.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Properties.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.nb_NO.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.fr_FR.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.ar_AE.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.zh_Hant.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.hr_HR.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.hu_HU.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.zh_CN.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.sl_SI.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.nl_NL.Resources.resources" />
+    <EmbeddedResource Include="SmartAudio.Localization.Lang_Resources.pl_PL.Resources.resources" />
+  </ItemGroup>
+</Project>
